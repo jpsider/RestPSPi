@@ -9,7 +9,7 @@
     {
         "RequestType":  "GET",
         "RequestURL":  "/Endpoint/Shutdown",
-        "Arguments": "none",
+        "Arguments": "na",
         "RequestCommand":  "none",
         "Example": "http://127.0.0.1:8080/Endpoint/Shutdown"
     },
