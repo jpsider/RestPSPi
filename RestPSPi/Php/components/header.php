@@ -23,7 +23,6 @@
             <button class="btn btn-inverse" type="button" onclick="switch_style('light');return false;" name="theme" value="Light Theme" id="light">Light Theme</button>
         </div>
         </header>
-		<div class="content-container">
 
 
 

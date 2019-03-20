@@ -1,0 +1,30 @@
+[
+    {
+        "RequestType":  "GET",
+        "RequestURL":  "/Endpoint/Status",
+        "RequestCommand":  "Return 1",
+        "Arguments": "none",
+        "Example": "http://127.0.0.1:8080/Endpoint/Status"
+    },
+    {
+        "RequestType":  "GET",
+        "RequestURL":  "/Endpoint/Shutdown",
+        "Arguments": "none",
+        "RequestCommand":  "none",
+        "Example": "http://127.0.0.1:8080/Endpoint/Shutdown"
+    },
+    {
+        "RequestType":  "GET",
+        "RequestURL":  "/endpoint/Match",
+        "RequestCommand":  "C:\\OPEN_PROJECTS\\RestPSPi\\RestPSPi\\endpoints\\GET\\Get-MatchData.ps1",
+        "Arguments": "none",
+        "Example": "http://127.0.0.1:8080/Endpoint/Temp"
+    },
+    {
+        "RequestType":  "PUT",
+        "RequestURL":  "/Update/GPIO",
+        "RequestCommand":  "/RestPS/Endpoints/PUT/Update-GPIOpin.ps1",
+        "Arguments": "GPIO_Pin,Value",
+        "Example": "http://127.0.0.1:8080/Update/GPIO?GPIO_Pin=1&Value=1"
+    }
+]

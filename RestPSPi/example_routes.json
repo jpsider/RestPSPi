@@ -1,0 +1,72 @@
+[
+    {
+        "RequestType":  "GET",
+        "RequestURL":  "/Endpoint/Status",
+        "RequestCommand":  "Return 1",
+        "Arguments": "none",
+        "Example": "http://127.0.0.1:8080/Endpoint/Status"
+    },
+    {
+        "RequestType":  "GET",
+        "RequestURL":  "/Endpoint/Shutdown",
+        "Arguments": "none",
+        "RequestCommand":  "none",
+        "Example": "http://127.0.0.1:8080/Endpoint/Shutdown"
+    },
+    {
+        "RequestType":  "GET",
+        "RequestURL":  "/endpoint/Temp/801",
+        "RequestCommand":  "Return '80.1'",
+        "Arguments": "none",
+        "Example": "http://127.0.0.1:8080/Endpoint/Temp/801"
+    },
+    {
+        "RequestType":  "GET",
+        "RequestURL":  "/endpoint/Temp/802",
+        "RequestCommand":  "Return '80.2'",
+        "Arguments": "none",
+        "Example": "http://127.0.0.1:8080/Endpoint/Temp/802"
+    },
+    {
+        "RequestType":  "GET",
+        "RequestURL":  "/endpoint/Temp/803",
+        "RequestCommand":  "Return '80.3'",
+        "Arguments": "none",
+        "Example": "http://127.0.0.1:8080/Endpoint/Temp/803"
+    },
+    {
+        "RequestType":  "GET",
+        "RequestURL":  "/endpoint/Temp/804",
+        "RequestCommand":  "Return '80.4'",
+        "Arguments": "none",
+        "Example": "http://127.0.0.1:8080/Endpoint/Temp/804"
+    },
+    {
+        "RequestType":  "GET",
+        "RequestURL":  "/endpoint/Temp/805",
+        "RequestCommand":  "Return '80.5'",
+        "Arguments": "none",
+        "Example": "http://127.0.0.1:8080/Endpoint/Temp/805"
+    },
+    {
+        "RequestType":  "GET",
+        "RequestURL":  "/endpoint/Temp/806",
+        "RequestCommand":  "Return '80.6'",
+        "Arguments": "none",
+        "Example": "http://127.0.0.1:8080/Endpoint/Temp/806"
+    },
+    {
+        "RequestType":  "GET",
+        "RequestURL":  "/endpoint/Temp/807",
+        "RequestCommand":  "Return '80.7'",
+        "Arguments": "none",
+        "Example": "http://127.0.0.1:8080/Endpoint/Temp/807"
+    },
+    {
+        "RequestType":  "PUT",
+        "RequestURL":  "/Update/GPIO",
+        "RequestCommand":  "return 'Pin Updated'",
+        "Arguments": "GPIO_Pin,Value",
+        "Example": "http://127.0.0.1:8080/Update/GPIO?GPIO_Pin=1&Value=1"
+    }
+]
