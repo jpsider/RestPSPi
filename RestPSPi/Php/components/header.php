@@ -15,7 +15,7 @@
         <title>PES Match Maker</title>
     </head>
     <body onload="set_style_from_cookie()">
-    <div class="main-container" style="margin-left:10px">
+    <div class="main-container">
 		<header class="header header-4">
 			Welcome to PES Match Maker!!
         <div class="header-actions">

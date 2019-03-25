@@ -10,7 +10,7 @@
 
 
 
-	$url = "http://localhost:8086/Endpoint/Match?Name01=Justin&name02=Kelly";
+	$url = "http://localhost:8080/Endpoint/Match?Name01=Justin&name02=Kelly";
 	$curl = curl_init();
     curl_setopt_array($curl, 
         array(
@@ -30,22 +30,24 @@
 	$response = curl_exec($curl);
 	$err = curl_error($curl);
 	curl_close($curl);
-	echo $response;
+	//echo $response;
 	$finalResponse = json_decode($response, true);
-	echo "</br>";
-	echo 'Name01:' .$finalResponse["Name01"];
-	echo "</br>";
-	echo 'Temp01:' .$finalResponse["Temp01"];
-	echo "</br>";
-    echo 'Name02:' .$finalResponse["Name02"];
-    echo "</br>";
-    echo 'Temp02:' .$finalResponse["Temp02"];    
-    echo "</br>";
-	echo 'Temp02:' .$finalResponse["MatchResult"]; 
+	//echo "</br>";
+	//echo 'Name01:' .$finalResponse["Name01"];
+	//echo "</br>";
+	//echo 'Temp01:' .$finalResponse["Temp01"];
+	//echo "</br>";
+    //echo 'Name02:' .$finalResponse["Name02"];
+    //echo "</br>";
+    //echo 'Temp02:' .$finalResponse["Temp02"];    
+    //echo "</br>";
+	//echo 'Temp02:' .$finalResponse["MatchResult"]; 
 		?>
+	<div class="content-container" style="justify-content:center">
 	<div class="flex-container flex-wrap">
 		<h3>PES MatchMaker</h3>
-		<div class="card-columns card-columns-2">
+		<div class="card-columns card-columns-4">
+			<div class="flex-item">
 			<div class="card">
 				<div class="card-block">
 					<h3 class="card-title"><clr-icon shape="plugin" size="24"></clr-icon>&nbsp Contestant 1</h3>
@@ -60,6 +62,8 @@
 					</center>
 				</div>
 			</div><!-- End Card -->
+			</div><!-- End Card -->
+			<div class="flex-item">
 			<div class="card">
 				<div class="card-block">
 					<h3 class="card-title"><clr-icon shape="plugin" size="24"></clr-icon>&nbsp Contestant 2</h3>
@@ -74,21 +78,28 @@
 					</center>
 				</div>
 			</div><!-- End Card -->
+			</div><!-- End Card -->
+		</div><!-- End Card Columns -->
+		<div class="card-columns card-columns-2" >
+		<div class="flex-item">
 			<div class="card">
 				<div class="card-block">
 					<h3 class="card-title"><clr-icon shape="plugin" size="24"></clr-icon>&nbsp Result</h3>
 					<center>
 						<p class="card-text">
                         <?php
-							echo "<h2>Name: ".$finalResponse["MatchResult"]."</h2></br>";
+							echo "<h2>Result: ".$finalResponse["MatchResult"]."</h2></br>";
                         ?>
 						</p>
 						Button to Start it!
 					</center>
 				</div>
 			</div><!-- End Card -->
-		</div><!-- End Card Columns -->
+		</div><!-- End Card -->
+		</div><!-- End Card -->
+		</div><!-- End Card -->
 	</div><!-- End  Flex container -->
-
-	</div>
+</div>
+	</div><!-- End Main Container -->
 </body>
+</html>
