@@ -44,7 +44,7 @@ if ($RequestArgs -like '*&*') {
     $Temp_Sensor02 = $null
     #3. Gets the Temp from Sensor 1
     #Write-Output "Getting Temp from Pi 01"
-    [float]$Temp_Sensor01 = Invoke-RestMethod -Method Get -Uri "http://localhost:8084/Endpoint/Temp/805"
+    [float]$Temp_Sensor01 = Invoke-RestMethod -Method Get -Uri "http://localhost:8081/Endpoint/Temp/805"
     #4. Gets the Temp from Sensor 2
     #Write-Output "Getting Temp from Pi 02"
     [float]$Temp_Sensor02 = Invoke-RestMethod -Method Get -Uri "http://localhost:8082/Endpoint/Temp/805"
