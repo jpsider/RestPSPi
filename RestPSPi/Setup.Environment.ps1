@@ -32,15 +32,6 @@ cd wiringPi
 ./build
 
 
-# Now to start PowerShell you can just run "pwsh"
-sudo WIRINGPI_CODES=1 pwsh
-
-gpio mode 0 out
-gpio mode 1 out
-gpio mode 2 out
-gpio mode 3 out
-gpio mode 4 out
-gpio mode 5 out
 
 # Install Required Modules
 Install-Module Microsoft.PowerShell.IOT
@@ -54,13 +45,54 @@ sudo raspi-config
 # Option P5
 # Enable and Finish
 
+####
+# Starting the Mgmt Endpoint
+Start-RestPSListener -RoutesFilePath "C:\OPEN_PROJECTS\RestPSPi\RestPSPi\mgmt_routes.json" -Port 8082
+
+
+
 # Useful Commands
+# Now to start PowerShell you can just run "pwsh"
+sudo WIRINGPI_CODES=1 pwsh
+
+####
+####  Start here to get the IOT stuff running.
+####
+####
+# Use Powershell to do cool stuff
 
 Import-Module Microsoft.PowerShell.IoT
 Import-Module ./PowerShell-IoT/Examples/Microsoft.PowerShell.IoT.BME280
+Import-Module ./PowerShell-IoT/Examples/Microsoft.PowerShell.IoT.LED
+Import-Module RestPS
+
+# Get the GPIO pins ready
+gpio mode 0 out
+gpio mode 1 out
+gpio mode 2 out
+gpio mode 3 out
+gpio mode 4 out
+gpio mode 5 out
+
+
 Get-BME280Data -Fahrenheit
 
 # playing with the data
-Get-GpioPin # Note - running this may cause the hardware device to disconnect. It's a pain in the ass!
-Get-BME280Device
-Get-BME280Data
+#Get-GpioPin # Note - running this may cause the hardware device to disconnect. It's a pain in the ass!
+#Get-BME280Device
+#Get-BME280Data
+
+# Turns the lights off then on.
+gpio write 0 1
+gpio write 0 0
+gpio write 1 1
+gpio write 1 0
+gpio write 2 1
+gpio write 2 0
+gpio write 3 1
+gpio write 3 0
+gpio write 4 1
+gpio write 4 0
+gpio write 5 1
+gpio write 5 0
+

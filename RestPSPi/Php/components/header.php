@@ -16,8 +16,12 @@
     </head>
     <body onload="set_style_from_cookie()">
     <div class="main-container">
-		<header class="header header-4">
-			Welcome to PES Match Maker!!
+		<header class="header header-2">
+		<div class="branding">
+                    <a href="index.php" class="nav-link">
+	    		        <span class="title"><clr-icon shape="home" size="24"></clr-icon>Welcome to PES Match Maker!!</span>
+                    </a>
+                </div>
         <div class="header-actions">
             <button class="btn btn-inverse" type="button" onclick="switch_style('dark');return false;" name="theme" value="Dark Theme" id="dark">Dark Theme</button>
             <button class="btn btn-inverse" type="button" onclick="switch_style('light');return false;" name="theme" value="Light Theme" id="light">Light Theme</button>
